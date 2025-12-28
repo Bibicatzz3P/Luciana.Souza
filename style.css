@@ -1,0 +1,306 @@
+/* Reset básico porque o navegador não sabe se comportar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+    background-color: #f4f6fa;
+    color: #2f2f2f;
+    line-height: 1.7;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #9fd3e6, #e6f6fb);
+    text-align: center;
+    padding: 70px 20px 60px;
+}
+
+header h1 {
+    font-size: 2.6rem;
+    color: #243b4a;
+    font-weight: 600;
+}
+
+header p {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    color: #445e6d;
+}
+
+/* Navegação */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4f6d7a;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #7cc4d4;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Cartões */
+.card {
+    max-width: 920px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+    margin-bottom: 18px;
+    font-size: 1.6rem;
+    color: #243b4a;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Listas */
+.card ul {
+    margin-left: 22px;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+}
+
+/* Destaque */
+.destaque {
+    background: linear-gradient(135deg, #f0faff, #ffffff);
+    border-left: 6px solid #7cc4d4;
+}
+
+/* Contato */
+.card p strong {
+    color: #243b4a;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        margin: 30px 15px;
+        padding: 30px 25px;
+    }
+}
+h1 {
+    color: #243b4a;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+.logo-fixa {
+    position: fixed;      /* fica fixa na tela */
+    top: 40px;            /* distância do topo */
+    left: 40px;           /* distância da esquerda */
+    width: 160px;          /* tamanho do quadrado */
+    height: 160px;
+    background-color: white; /* opcional */
+    border-radius: 8px;   /* cantos levemente arredondados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;        
+  }
+  
+  .logo-fixa img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  section {
+    scroll-margin-top: 100px; /* ajuste conforme a altura do seu menu */
+}
+#carouselLinks {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#carouselLinks .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+#carouselLinks .carousel-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+
+#carouselLinks .carousel-item.active {
+    position: relative;
+}
+
+#carouselLinks img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.carousel-item {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+  }
+  .carousel-item {
+    transition: opacity 0.8s ease-in-out;
+  }
+  .carousel-img {
+    width: 100%;
+    height: 420px;
+    object-fit: contain; /* ou cover se quiser preencher */
+    background: #fff;
+  }
+
+  .carousel {
+    max-width: 520px;
+    margin: auto;
+  }
+  .carousel-img {
+    border-radius: 16px;
+  }
+    
+  #contato #carouselLinks {
+    margin: 20px 0;
+  }
+  
+  .carousel-item.active {
+    opacity: 1;
+    position: relative;
+  }
+  /* layout do contato */
+.contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* texto à esquerda */
+  .contato-texto {
+    flex: 1;
+  }
+  
+  /* carrossel à direita */
+  .contato-carrossel {
+    flex-shrink: 0;
+  }
+  
+  /* tamanho menor do carrossel */
+  #contato #carouselLinks {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* mantém imagem certinha */
+  #contato .carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 16px;
+  }
+/* força layout horizontal só no contato */
+#contato.contato {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* texto ocupa a esquerda */
+  #contato .contato-texto {
+    flex: 1;
+  }
+  
+  /* carrossel empurrado pra direita */
+  #contato .contato-carrossel {
+    margin-left: auto;
+  }
+  
+  /* tamanho menor */
+  #contato #carouselLinks {
+    width: 200px;
+    height: 200px;
+  }
+  
+  @media (max-width: 768px) {
+    #carouselLinks {
+      position: static;
+      transform: none;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  
+    #contato .contato-carrossel {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    #contato {
+        position: relative;
+
+      }
+      #carouselLinks {
+        position: absolute;
+        right: 20px;      
+        top: 35%;
+        transform: translateY(-50%);
+        width: 180px;
+      }
+     
+
+      
+  
