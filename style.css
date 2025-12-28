@@ -19,6 +19,10 @@ header {
     text-align: center;
     padding: 70px 20px 60px;
 }
+.logo-fixa {
+    border-radius: 16px;
+  }
+  
 
 header h1 {
     font-size: 2.6rem;
@@ -303,4 +307,18 @@ h1 {
      
 
       
-  
+      .logo-fixa img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .logo-fixa {
+        z-index: 9999;
+      }
+      
+      .logo-fixa img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      
